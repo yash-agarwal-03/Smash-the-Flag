@@ -159,4 +159,23 @@ class GameCode
         else
         System.out.println("\t\t\tYou LOST!! \nFlags Smashed: "+smash+ "\nFlags Left: : " + (d-smash));
     }
+        public static void main(String args[])
+    {
+        GameCode ob=new GameCode();  
+        Scanner k=new Scanner(System.in);
+        
+        while(true)
+        {
+            ob.generator();
+            ob.display();
+            ob.gameRun(); 
+            System.out.println("\nWanna Play Again ? \n YES or NO");
+            String ch=k.next();
+            if(ob.check(ch,1)==0)
+            break;
+       }           
+        
+        
+    }
+
 }
